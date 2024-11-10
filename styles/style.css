@@ -1,14 +1,15 @@
-/* General styles */
+/* General Styles */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f9f9f9;
 }
 
 header {
   background-color: #333;
   color: white;
-  padding: 10px;
+  padding: 1rem;
   text-align: center;
 }
 
@@ -18,39 +19,37 @@ nav ul {
   list-style-type: none;
   background-color: #444;
   margin: 0;
-  padding: 10px;
+  padding: 1rem 0;
 }
 
-nav ul li {
-  padding: 10px;
-}
-
-nav ul li a {
+nav a {
   color: white;
   text-decoration: none;
+  padding: 0.5rem;
+}
+
+nav a:hover {
+  background-color: #888;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
 }
 
 footer {
   background-color: #333;
   color: white;
-  padding: 10px;
+  padding: 1rem;
   text-align: center;
 }
 
-/* Mobile responsive styles */
+/* Responsive Styles */
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column;
+      flex-direction: column;
   }
-}
-
-/* Additional styles */
-h2 {
-  color: #444;
-}
-
-section {
-  padding: 20px;
-  margin: 20px;
-  background-color: #f9f9f9;
 }
