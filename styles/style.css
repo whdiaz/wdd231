@@ -47,9 +47,136 @@ footer {
   text-align: center;
 }
 
+/* Course Card Styles (Album Style) */
+.course-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 15px; /* Rounded corners */
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Keeps the rounded corners neat */
+  position: relative;
+}
+
+/* Hover effect for a "pop-up" feeling */
+.course-card:hover {
+  transform: translateY(-5px); /* Lift the card slightly */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+}
+
+.course-card h3 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  font-weight: bold;
+  color: #333;
+  text-align: center; /* Center the title */
+  transition: color 0.3s ease;
+}
+
+.course-card p {
+  font-size: 1rem;
+  margin: 0.25rem 0;
+  text-align: center; /* Center the text */
+}
+
+/* Status text */
+.status {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+.completed {
+  background-color: #d4edda; /* Light green */
+  color: #28a745; /* Green text */
+}
+
+.not-completed {
+  background-color: #f8d7da; /* Light red */
+  color: #dc3545; /* Red text */
+}
+
+/* Course card image (optional) */
+.course-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* Optional: Image overlay effect */
+.course-card .image-container {
+  position: relative;
+  overflow: hidden;
+  height: 200px; /* Set a fixed height for the image */
+  border-radius: 12px;
+}
+
+.course-card .image-container:hover img {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  transition: transform 0.3s ease;
+}
+
+/* Credits Display */
+#totalCredits {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Buttons for Filtering */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
-  nav ul {
-      flex-direction: column;
+  .course-card {
+    padding: 1rem;
   }
+
+  #totalCredits {
+    font-size: 1.125rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    margin-bottom: 1.5rem;
+  }
+
+  nav a {
+    padding: 0.25rem;
+  }
+}
+
+/* Focus state for accessibility */
+a:focus, button:focus {
+  outline: 2px solid #f8d7da;
+  outline-offset: 2px;
 }
